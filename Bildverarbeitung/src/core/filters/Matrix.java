@@ -93,13 +93,14 @@ public class Matrix {
 
 	/**
 	 * Calculates the sum of all elements in the matrix
+	 * 
 	 * @return The total value of all elements in the matrix
 	 */
 	public double total() {
 		double total = 0;
 		for (int i = 0; i < height(); i++) {
 			for (int j = 0; j < width(); j++) {
-				total += getValue(i,j);
+				total += getValue(i, j);
 			}
 		}
 		return total;
@@ -113,19 +114,19 @@ public class Matrix {
 	 * @return A matrix with a {@link #total()} of 1
 	 */
 	public Matrix normalizeTotal() {
-		return this.multiplyScalar(this.total());
+		return this.multiplyScalar(1.0 / this.total());
 	}
 
 	public Matrix transpose() {
 		double[][] vals = new double[height()][width()];
 		for (int x = 0; x < vals.length; x++) {
 			for (int y = 0; y < vals[x].length; y++) {
-				vals[x][y] = getValue(y,x);
+				vals[x][y] = getValue(y, x);
 			}
 		}
 		return new Matrix(vals);
 	}
-	
+
 	public double[][] toArray() {
 		return MatrixUtils.copyArr(arr);
 	}

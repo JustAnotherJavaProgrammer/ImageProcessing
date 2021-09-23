@@ -13,7 +13,7 @@ public class FilterDemo {
 				1, 2, 1, // i = 0
 				2, 4, 2, // i = 1
 				1, 2, 1 // i = 2
-		}).multiplyScalar(0.0625);
+		}).normalizeTotal();
 		Filter f = new MaskFilter(mask);
 		QuickView.showPicture(FilterRunner.applyFilter(new Picture("Panorama-Schulhof-mit-Text.png"), f));
 	}
