@@ -10,6 +10,10 @@ public class MaskFilter implements Filter {
 	public MaskFilter(Mask mask) {
 		setMask(mask);
 	}
+	
+	public Mask getMask() {
+		return mask;
+	}
 
 	public void setMask(Mask mask) {
 		this.mask = mask;

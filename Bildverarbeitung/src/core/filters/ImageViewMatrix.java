@@ -155,6 +155,10 @@ public class ImageViewMatrix extends Matrix {
 
 	public static void setColorLayerValue(Picture pic, int x, int y, int colorLayer, int value) {
 		Color c = pic.getColor(x, y);
+		if (value > 255)
+			value = 255;
+		else if (value < 0)
+			value = 0;
 		pic.setColor(x, y,
 				new Color(colorLayer == COLOR_LAYER_RED ? value : c.getRed(),
 						colorLayer == COLOR_LAYER_GREEN ? value : c.getGreen(),
