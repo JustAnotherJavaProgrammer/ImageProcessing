@@ -42,6 +42,17 @@ public class ImageViewMatrix extends Matrix {
 		this.edgeBehaviour = edgeBehaviour;
 	}
 
+	private ImageViewMatrix(int width, int height, int edgeBehaviour, Point position, int offX, int offY, Picture pic,
+			int colorLayer) {
+		super(width, height);
+		this.edgeBehaviour = edgeBehaviour;
+		this.position = position;
+		this.offX = offX;
+		this.offY = offY;
+		this.pic = pic;
+		this.colorLayer = colorLayer;
+	}
+
 	public void setPosition(int x, int y) {
 		if (coordinatesOutOfBounds(x, y))
 			throw new IllegalArgumentException("Coordinates (" + x + ", " + y + ") are out of bounds!");
@@ -163,6 +174,10 @@ public class ImageViewMatrix extends Matrix {
 				new Color(colorLayer == COLOR_LAYER_RED ? value : c.getRed(),
 						colorLayer == COLOR_LAYER_GREEN ? value : c.getGreen(),
 						colorLayer == COLOR_LAYER_BLUE ? value : c.getBlue()));
+	}
+
+	public ImageViewMatrix quickClone() {
+		return new ImageViewMatrix(width(), height(), edgeBehaviour, new Point(position), offX, offY, pic, colorLayer);
 	}
 
 }

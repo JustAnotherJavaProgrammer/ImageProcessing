@@ -1,4 +1,4 @@
-package main;
+package gui;
 
 import core.BlackWhite;
 import de.informatics4kids.Picture;

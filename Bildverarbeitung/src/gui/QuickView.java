@@ -1,4 +1,4 @@
-package main;
+package gui;
 import de.informatics4kids.Picture;
 import de.informatics4kids.PictureViewer;
 
