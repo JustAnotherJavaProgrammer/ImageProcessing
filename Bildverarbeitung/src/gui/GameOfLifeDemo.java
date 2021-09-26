@@ -9,6 +9,7 @@ import javax.swing.border.EmptyBorder;
 
 import core.filters.FilterRunnerParallel;
 import core.filters.ImageViewMatrix;
+import core.filters.algorithms.IntensityThresholdFilter;
 import core.filters.algorithms.bonus.ConwaysGameOfLife;
 import de.informatics4kids.Picture;
 
@@ -27,7 +28,7 @@ public class GameOfLifeDemo extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					GameOfLifeDemo frame = new GameOfLifeDemo(new Picture("C:\\Users\\lukas\\Desktop\\Carolina-Dog2.jpg"));
+					GameOfLifeDemo frame = new GameOfLifeDemo(FilterRunnerParallel.applyFilter(new Picture("C:\\Users\\lukas\\Desktop\\Carolina-Dog2.jpg"), new IntensityThresholdFilter()));
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
