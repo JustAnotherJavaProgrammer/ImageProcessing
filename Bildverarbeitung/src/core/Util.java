@@ -1,6 +1,20 @@
 package core;
 
+/**
+ * Utility class providing static methods for working with arrays of
+ * types {@code int[]} and {@code double[]}
+ * 
+ * @author JustAnotherJavaProgrammer
+ */
 public class Util {
+	/**
+	 * Calculates the minimum value an element in the array
+	 * <p>
+	 * If the array contains no elements ({@code length == 0}), this method will return {@code 0}.
+	 * </p>
+	 * @param nums An array of {@code int}s
+	 * @return The smallest number in the given array
+	 */
 	public static int minOfMultiple(int[] nums) {
 		if (nums.length == 0)
 			return 0;
@@ -11,6 +25,14 @@ public class Util {
 		return min;
 	}
 
+	/**
+	 * Calculates the maximum value an element in the array
+	 * <p>
+	 * If the array contains no elements ({@code length == 0}), this method will return {@code 0}.
+	 * </p>
+	 * @param nums An array of {@code int}s
+	 * @return The largest number in the given array
+	 */
 	public static int maxOfMultiple(int[] nums) {
 		if (nums.length == 0)
 			return 0;
@@ -21,6 +43,14 @@ public class Util {
 		return max;
 	}
 
+	/**
+	 * Calculates the minimum value an element in the array
+	 * <p>
+	 * If the array contains no elements ({@code length == 0}), this method will return {@code 0}.
+	 * </p>
+	 * @param nums An array of {@code double}s
+	 * @return The smallest number in the given array
+	 */
 	public static double minOfMultiple(double[] nums) {
 		if (nums.length == 0)
 			return 0;
@@ -31,6 +61,14 @@ public class Util {
 		return min;
 	}
 
+	/**
+	 * Calculates the maximum value an element in the array
+	 * <p>
+	 * If the array contains no elements ({@code length == 0}), this method will return {@code 0}.
+	 * </p>
+	 * @param nums An array of {@code double}s
+	 * @return The largest number in the given array
+	 */
 	public static double maxOfMultiple(double[] nums) {
 		if (nums.length == 0)
 			return 0;
@@ -41,6 +79,11 @@ public class Util {
 		return max;
 	}
 
+	/**
+	 * Private helper method to get the index of the index of the element with the smallest value in the array
+	 * @param arr An array of {@code int}s
+	 * @return The index of the smallest {@code int} in the array
+	 */
 	private static int minIndex(int[] arr) {
 		int value = arr[0];
 		int index = 0;
@@ -53,6 +96,12 @@ public class Util {
 		return index;
 	}
 
+	// TODO: ADD DOCUMENTATION
+	/**
+	 * 
+	 * @param arr
+	 * @return
+	 */
 	public static int[] sort(int[] arr) {
 		arr = arr.clone();
 		int[] sorted = new int[arr.length];

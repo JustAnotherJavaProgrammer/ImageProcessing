@@ -28,7 +28,7 @@ public class GameOfLifeDemo extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					GameOfLifeDemo frame = new GameOfLifeDemo(FilterRunnerParallel.applyFilter(new Picture("C:\\Users\\lukas\\Desktop\\Carolina-Dog2.jpg"), new IntensityThresholdFilter()));
+					GameOfLifeDemo frame = new GameOfLifeDemo(FilterRunnerParallel.applyFilter(new Picture("/home/student/Downloads/Carolina_dog_Ball_.jpg"), new IntensityThresholdFilter()));
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
